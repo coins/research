@@ -2,6 +2,12 @@
 
 A decentralized content delivery network.
 
+## Hashes as file names
+All files stored in the dCDN are of the format
+```
+<<sha256(file)>>.js
+```
+
 ## Example 
 
 Suppose we have a super simple `app.js` running under https://example.com:
