@@ -40,4 +40,4 @@ This is simple to update. If a subfolder contains too many files it is split up.
 
 
 ## Foreign Fetch
-We can use a foreign fetch service worker to centralize all requests of all apps into a single service worker caching the responses.
+We can use a foreign fetch service worker to centralize all requests of all apps running in a browser into a single service worker caching those responses.
