@@ -1,12 +1,19 @@
 # Decentralized Content Delivery Network
 
-A decentralized content delivery network.
+A decentralized content delivery network. Similar to IPFL but no installation required to run in regular browsers.
 
 ## Hashes as file names
 All files stored in the dCDN have file names of the format
 ```
 <<sha256(file)>>.js
 ```
+### Updateable files 
+An advanced filename scheme can use file names of the format
+
+```
+<<sha256( sha256(file) + sha256(public_key) )>>.js
+```
+such that the author can prove succinctly the legitimacy of updates of the original file. 
 
 ## Example 
 
@@ -44,7 +51,7 @@ peers.js // Advertising all other known dCDNs
 ...
 ```
 
-This is simple to update. If a subfolder contains too many files it is split up.
+This is simple to update. If a sub-folder contains too many files it is split up.
 
 
 ## Foreign Fetch
