@@ -15,7 +15,7 @@ The service worker keeps a list of root URLs of known dCDNs.
 Every dCDN advertises a list of its known dCDNs.
 
 ## Running dCDNs
-Running a dCDN should be as simple as possible. They serve only static files over HTTP.
+Running a dCDN should be as simple as possible. They mirror files and serve them statically over HTTP.
 For efficient queries, a CDNs organizes its directory in a simple Radix tree:
 
 ```
