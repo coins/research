@@ -3,7 +3,7 @@
 A decentralized content delivery network.
 
 ## Hashes as file names
-All files stored in the dCDN are of the format
+All files stored in the dCDN have file names of the format
 ```
 <<sha256(file)>>.js
 ```
