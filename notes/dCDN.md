@@ -20,6 +20,8 @@ It intercepts any request to `https://example.com/dCDN/<filename>` and proxies i
 The service worker keeps a list of root URLs of known dCDNs. 
 Every dCDN advertises a list of its known dCDNs.
 
+The service worker downloads the file randomly from any dCDNs and verifies its integrity.
+
 ## Running dCDNs
 Running a dCDN should be as simple as possible. They mirror files and serve them statically over HTTP.
 For efficient queries, a CDNs organizes its directory in a simple Radix tree:
@@ -47,3 +49,4 @@ This is simple to update. If a subfolder contains too many files it is split up.
 
 ## Foreign Fetch
 We can use a foreign fetch service worker to centralize all requests of all apps running in a browser into a single service worker caching those responses.
+Furthermore, apps can distrust that service worker by verifying source integrity via CSP.
