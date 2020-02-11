@@ -1,6 +1,6 @@
 # RSA Groups of Unknown Order
 
-Groups of unknown order have interesting applications such as constant-size accumulators with inclusion proof aggregation. Usually, RSA accumulators require a trusted setup. The following is an idea that might be able to remove the need for a trusted setup.
+Groups of unknown order have interesting applications such as accumulators with constant-size inclusion proof aggregation. Usually, RSA accumulators require a trusted setup. The following is an idea that might be able to remove the need for a trusted setup.
 
 ## Idea
 We start with the `k`-th *primorial*, which is simply the product of the first `k` primes:
