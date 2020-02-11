@@ -78,4 +78,4 @@ The obvious problem here is that we can give no strong guarantees about the size
 ```
 n = 2 * 3 * ... * p_i - p_(i+1) * p_(i+2) * p_(i+3) * ... * p_k
 ```
-It allows us to exclude more factors without increasing the size of `n`.
+It allows us to increase `k` and exclude more factors without increasing the size of `n`.
