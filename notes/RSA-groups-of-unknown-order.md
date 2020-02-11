@@ -28,6 +28,7 @@ log(n) / log( p_(k+1) )
 
 ```javascript
 const {primesList} = await import('https://coins.github.io/primes-js/src/primes/primes-list.js');
+
 P = primesList.splice(0, 500).reduce( (a,e)=> a*BigInt(e), 1n ) // the first 500 primes multiplied
 n = P - BigInt(primesList[0]) // subtracting the 501-th prime
 ```
@@ -53,7 +54,7 @@ n = 517 844363 ×
 512345 359544 247424 192980 247265 066223 950313 832042 742456 993622 226914 638274 024518 251556
 284886 341122 351676 064260 447938 571679 532559 552356 113960 189977 828296 088279 646804 601143
 ```
-Fermat's little theorem yields simple compositeness certificates with e.g `2^(n-1) != 1 (mod n)`. So we just created a composite number `m` with 1512 decimal digits of which we don't know the factorization:
+So we just created a composite number `m` with 1512 decimal digits of which we don't know the factorization:
 ```
 m = 107675 179404 670452 030360 990863 929166 289336 165681 831486 115600 569765 323727 526686 761844
 478472 995616 210491 579390 911765 029330 295026 354632 750965 909239 356837 466939 765020 651218
@@ -74,6 +75,7 @@ m = 107675 179404 670452 030360 990863 929166 289336 165681 831486 115600 569765
 512345 359544 247424 192980 247265 066223 950313 832042 742456 993622 226914 638274 024518 251556
 284886 341122 351676 064260 447938 571679 532559 552356 113960 189977 828296 088279 646804 601143
 ```
+Fermat's little theorem yields simple compositeness certificates with e.g `2^(m-1) != 1 (mod m)`. 
 
 
 ## Discussion 
