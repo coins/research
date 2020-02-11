@@ -1,6 +1,6 @@
 # RSA Groups of Unknown Order
 
-Groups of unknown order have interesting applications such constant-size accumulators with inclusion proof aggregation. Usually, RSA accumulators require a trusted setup. The following is an idea that might be able to remove the need for a trusted setup.
+Groups of unknown order have interesting applications such as constant-size accumulators with inclusion proof aggregation. Usually, RSA accumulators require a trusted setup. The following is an idea that might be able to remove the need for a trusted setup.
 
 ## Idea
 We start with the `k`-th *primorial*, which is simply the product of the first `k` primes:
@@ -74,4 +74,8 @@ m = 107675 179404 670452 030360 990863 929166 289336 165681 831486 115600 569765
 
 
 ## Discussion 
-The obvious problem here is that we can give no strong guarantees about the size of the factors of `n` other than that they're much larger than `517844363`. Still, it might be worth to explore the idea further.
+The obvious problem here is that we can give no strong guarantees about the size of the factors of `n` other than that they're much larger than `517844363`. Still, it might be worth to explore the idea further. A first optimization is to choose `n` like:
+```
+n = 2 * 3 * ... * p_i - p_(i+1) * p_(i+2) * p_(i+3) * ... * p_k
+```
+It allows us to exclude more factors without increasing the size of `n`.
