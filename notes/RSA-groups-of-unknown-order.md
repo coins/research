@@ -19,6 +19,10 @@ can not be divisible by `2,3,...,p_k`. If `n` is composite, all factors `f_i` of
 ```
 p_k < f_i < n / p_k
 ``` 
+and the number of factors of `n` is at most
+```
+log(n) / log( p_(k+1) )
+```
 
 ## Example 
 
@@ -77,4 +81,4 @@ The obvious problem here is that we can give no strong guarantees about the size
 ```
 n = 2 * 3 * ... * p_i - p_(i+1) * p_(i+2) * p_(i+3) * ... * p_k
 ```
-This allows us to increase `k` and exclude more factors without increasing the size of `n`.
+This allows us to increase `k` and provably exclude more factors without increasing the size of `n`.
