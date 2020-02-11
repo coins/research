@@ -49,8 +49,7 @@ n = 517 844363 ×
 512345 359544 247424 192980 247265 066223 950313 832042 742456 993622 226914 638274 024518 251556
 284886 341122 351676 064260 447938 571679 532559 552356 113960 189977 828296 088279 646804 601143
 ```
-
-So we created a composite number `m` with 1512 decimal digits of which we don't know the factorization:
+Fermat's little theorem yields simple compositeness certificates with e.g `2^(n-1) != 1 (mod n)`. So we just created a composite number `m` with 1512 decimal digits of which we don't know the factorization:
 ```
 m = 107675 179404 670452 030360 990863 929166 289336 165681 831486 115600 569765 323727 526686 761844
 478472 995616 210491 579390 911765 029330 295026 354632 750965 909239 356837 466939 765020 651218
@@ -78,4 +77,4 @@ The obvious problem here is that we can give no strong guarantees about the size
 ```
 n = 2 * 3 * ... * p_i - p_(i+1) * p_(i+2) * p_(i+3) * ... * p_k
 ```
-It allows us to increase `k` and exclude more factors without increasing the size of `n`.
+This allows us to increase `k` and exclude more factors without increasing the size of `n`.
