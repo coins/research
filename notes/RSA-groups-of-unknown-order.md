@@ -74,7 +74,7 @@ m = 107675 179404 670452 030360 990863 929166 289336 165681 831486 115600 569765
 
 
 ## Discussion 
-The obvious problem here is that we can give no strong guarantees about the size of the factors of `n` other than that they're much larger than `517844363`. Still, it might be worth to explore the idea further. A first optimization is to choose `n` like:
+The obvious problem here is that we can give no strong guarantees about the size of the factors of `n` other than that they're much larger than `517844363`. Still, it might be worth to explore the idea further. A first optimization is to choose `n` as a difference of consecutive primes like:
 ```
 n = 2 * 3 * ... * p_i - p_(i+1) * p_(i+2) * p_(i+3) * ... * p_k
 ```
