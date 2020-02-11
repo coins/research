@@ -28,8 +28,8 @@ log(n) / log( p_(k+1) )
 
 ```javascript
 const {primesList} = await import('https://coins.github.io/primes-js/src/primes/primes-list.js');
-P = primesList.splice(0, 500) // the first 500 primes
-n = P.reduce( (a,e)=> a*BigInt(e), 1n ) - BigInt(primesList[0])
+P = primesList.splice(0, 500).reduce( (a,e)=> a*BigInt(e), 1n ) // the first 500 primes multiplied
+n = P - BigInt(primesList[0]) // subtracting the 501-th prime
 ```
 Factoring out the "small" factors yields:
 ```
@@ -82,3 +82,6 @@ The obvious problem here is that we can give no strong guarantees about the size
 n = 2 * 3 * ... * p_i - p_(i+1) * p_(i+2) * p_(i+3) * ... * p_k
 ```
 This allows us to increase `k` and provably exclude more factors without increasing the size of `n`.
+
+In general, the scheme described here might be interesting in situations where an ad-hoc trusted modulus is required.
+

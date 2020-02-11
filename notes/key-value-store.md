@@ -44,3 +44,24 @@ A = g^s  (mod m)
 ### Enhancements
 - We can extend the value range. For uniqueness it's sufficient that all factors of a `value_i` are smaller than `p(32)`.
 - The product `s` is most compact if the set can be sorted such that the smallest key has the largest value.
+
+
+#### Mapping Addresses to Keys 
+A bitcoin address is about 20 bytes which we can not represent in the above system. We can introduce a second map `address -> index` by adding more elements to the accumulator.
+```
+elem = Hash( address | index | nonce )   <-- `nonce` s.t. `elem` is a prime
+```
+We can also store the index counter in the accumulator within a dedicated element 
+```
+counter = Hash( <static_random_identifier> | curr_index | nonce )   <--  ...is a prime
+```
+So adding `elem` and proving the transition from state `A_0 -> A_1` works like:
+```
+verify: 
+A_0 = proof ^ counter
+elem.index == counter.curr_index + 1
+
+update: 
+next_counter = Hash( <static_random_identifier> | curr_index + 1 | nonce )  <-- ...is a prime
+A_1 = proof ^ elem ^ next_counter
+```
