@@ -53,7 +53,7 @@ elem = Hash( address | index | nonce )   <-- `nonce` s.t. `elem` is a prime
 ```
 We can also store the index counter in the accumulator within a dedicated element 
 ```
-counter = Hash( <static_random_identifier> | curr_index | nonce )   <--  ...is a prime
+counter = p( p( MAX_ACCOUNTS ) * curr_index ) 
 ```
 So adding `elem` and proving the transition from state `A_0 -> A_1` works like:
 ```
@@ -62,6 +62,6 @@ A_0 = proof ^ counter
 elem.index == counter.curr_index + 1
 
 update: 
-next_counter = Hash( <static_random_identifier> | curr_index + 1 | nonce )  <-- ...is a prime
+next_counter = counter = p( p( MAX_ACCOUNTS ) * ( curr_index + 1 ) )
 A_1 = proof ^ elem ^ next_counter
 ```
