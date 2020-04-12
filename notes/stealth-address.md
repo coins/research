@@ -43,5 +43,5 @@ For every transaction:
 
 
 ## Limitations 
-- Bob has to scan every transaction 
-- For every transaction in the blockchain Bob has to perform two multiplications
+- Bob has to scan every transaction in the blockchain 
+- For every transaction Bob has to perform two EC multiplications
