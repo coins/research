@@ -21,7 +21,7 @@ Alice maps the point `S` to a scalar `s` (e.g. via Hashing or HMAC?)
 ```
 s = Hash(S)
 ```
-Alice creates an stealth key for Bob:
+Alice creates a stealth key for Bob:
 ```
 C = s * B
 ```
