@@ -40,3 +40,8 @@ For every transaction:
   if C is the recipient's key
     => Bob received Bitcoins from A
 ```
+
+
+## Limitations 
+- Bob has to scan every transaction 
+- For every transaction in the blockchain Bob has to perform two multiplications
