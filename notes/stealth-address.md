@@ -45,3 +45,4 @@ For every transaction:
 ## Limitations 
 - Bob has to scan every transaction in the blockchain 
 - For every transaction Bob has to perform two EC multiplications
+- It's pretty ugly that B needs to extract the public key from the spending transaction though (what if it's a multisig, or a coinjoin, or some new script they don't understand?) 
