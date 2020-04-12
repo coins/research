@@ -27,7 +27,7 @@ C = s * B
 ```
 Alice sends Bitcoins from her key `A` to the stealth key `C`. 
 
-(Side note: Actually the bitcoin's are sent to the corresponding *address*)
+(Side note: Actually the bitcoins are sent to the corresponding *address*)
 
 ### Receiving
 Bob scans every transaction in the blockchain. 
