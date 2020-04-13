@@ -51,7 +51,7 @@ For every transaction:
 ## Improvements 
 
 ### Bob needs private key online
-When the recipient Bob scanns the blockchain he needs his private key `b` to compute the shared nonce `S`. 
+When the recipient Bob scans the blockchain he needs his private key `b` to compute the shared nonce `S`. 
 We can introduce a second private key such that we have separate keys for nonce generation and spending.
 ```
 B_nonce = b_nonce * G
