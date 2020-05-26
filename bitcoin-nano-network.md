@@ -279,3 +279,9 @@ We can apply a series of simple integrity checks to harden our construction. The
  - Roughly speaking, 20% of a chunk's outputs prove 80% of its value. 
  
 This results in relatively strong proofs for the total supply which are very succinct. 
+
+
+
+## Related Work
+- https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-February/013591.html
+- https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-September/017287.html
