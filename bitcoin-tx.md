@@ -1,4 +1,4 @@
-# Bitcoin Transactions 
+# Raw Bitcoin Transactions 
 
 ## References 
 - https://en.bitcoin.it/wiki/Transaction
