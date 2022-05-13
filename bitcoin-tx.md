@@ -1,11 +1,5 @@
 # Raw Bitcoin Transactions 
 
-## References 
-- https://en.bitcoin.it/wiki/Transaction
-- https://en.bitcoin.it/wiki/BIP_0141#Examples
-- https://en.bitcoin.it/wiki/Script
-- https://bitcoin.stackexchange.com/questions/92680/what-are-the-der-signature-and-sec-format
-
 ## P2PK
 https://blockstream.info/block/00000000d1145790a8694403d4063f323d499e655c83426834d4ce2f8dd4a2ee
 ### Raw
@@ -441,3 +435,10 @@ witness:
 			data: 012220dcd9a3fdad900e39ff367823f5d683135238d04425ac8dce19d0220e5791c700ac21c150929b74c1a04954b78b4b6035e97a5e078a5a0f28ec96d547bfee9ace803ac0
 locktime: b7680000
 ```
+
+
+## References 
+- https://en.bitcoin.it/wiki/Transaction
+- https://en.bitcoin.it/wiki/BIP_0141#Examples
+- https://en.bitcoin.it/wiki/Script
+- https://bitcoin.stackexchange.com/questions/92680/what-are-the-der-signature-and-sec-format
